@@ -14,8 +14,13 @@ $(NAME): $(OBJS)
 
 %.o: %.c 
 	$(CC) $(CFLAGS) -c $< -o $@
+
 clean:
 	rm -rf $(OBJS) $(NAME)
+	rm -rf html
 
+doc:
+	doxygen
+	
 
 
